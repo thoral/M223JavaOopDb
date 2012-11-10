@@ -18,44 +18,36 @@ public class Swing extends JFrame implements ActionListener{
 	Button btClose;   
 	JTextField buch = new JTextField(15);
 	JTextField autor  = new JTextField(15);
-	JTextArea genre = new JTextArea(4,15);
+	JTextField genre = new JTextField(15);
 	JButton senden = new JButton("senden");
 	
 	
 	JLabel laBuch;
 	JLabel laAutor = new JLabel("Autor");
 	JLabel laGenre = new JLabel("Genre");
+	JRadioButton r01 = new JRadioButton();
 	// Variable deklarieren, um überall zu arbeiten
+	private Factory rbp;
 	private JPanel mainPanel;
 	
 	public Swing()
 	{	
 		super ("Buchverleih");
-		mainPanel = new JPanel();
-		mainPanel.setLayout(new GridBagLayout() );
+		
 	
-		
-		buch = addField("Buchname"); 
-		autor = addField("autor");
-		
+		Factory fac = new Factory();
+		mainPanel = fac.getPanel();
 		add(mainPanel);
 		
+		buch = fac.addField("Buchname"); 
+		autor = fac.addField("autor");	
+		genre = fac.addField("Genre");
+		
+		r01 = fac.createRadioButton("test", "hier");
+							
 		setVisible(true);
 	}
 	
-	
-	
-	private JTextField addField(String name) {
-		
-		GridBagConstraints gbc = new GridBagConstraints();
-		gbc.gridwidth = GridBagConstraints.REMAINDER;
-		JTextField tf = new JTextField(40);
-		mainPanel.add(new JLabel (name) );
-		mainPanel.add(tf, gbc);
-		return tf;
-	}
-
-
 
 	public static void main(String[] args) {
 		

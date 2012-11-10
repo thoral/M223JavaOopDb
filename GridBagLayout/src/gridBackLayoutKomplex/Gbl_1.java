@@ -105,7 +105,7 @@ public class Gbl_1 extends JFrame implements ActionListener{
 /*
  * Button senden
  */
-		gbc.gridx = 1;
+		gbc.gridx = 2;
 		gbc.gridy = 4;
 		senden.addActionListener(this);
 		gbl.setConstraints(senden, gbc);
@@ -113,8 +113,8 @@ public class Gbl_1 extends JFrame implements ActionListener{
 
 		gbc.gridx = 0;
 		gbc.gridy = 4;
-		gbc.gridheight = 4;
-		gbc.gridwidth = 1;
+		gbc.gridheight = 1;
+		gbc.gridwidth = 2;
 		
 		/*
 		 * Radio Button
@@ -129,6 +129,7 @@ public class Gbl_1 extends JFrame implements ActionListener{
 			
 			gbc.gridx = 1;
 			gbc.gridy = 1;
+			
 			schliessen.addActionListener(this);
 			add(schliessen);
 			
