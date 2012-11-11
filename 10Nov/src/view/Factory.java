@@ -1,5 +1,7 @@
 package view;
 
+
+
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
@@ -7,7 +9,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-
 import java.awt.Container;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -30,11 +31,11 @@ public JTextField addField(String name) {
 		return tf;
 	}
 
-public RadioButtonPanel(String t) {
+public void radioButtonPanel(String t) {
 	
 	//Nach Wunsch Rahmen erzeugen
-this.setBorder(BorderFactory.createTitledBorder(t) );
-mainPanel.add(buttonGroup);
+this.mainPanel.setBorder(BorderFactory.createTitledBorder(t) );
+
 
 }
 
@@ -43,9 +44,9 @@ public JRadioButton createRadioButton(String t, String ac) {
 	
 	JRadioButton b = new JRadioButton(t);	
 	b.setActionCommand(ac);	
-	add(b);
+	mainPanel.add(b);
 	buttonGroup.add(b);
-	mainPanel.add(buttonGroup);
+
 	return b;
 }
 

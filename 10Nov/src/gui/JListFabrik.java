@@ -17,18 +17,15 @@ public class JListFabrik {
 	 *
 	 *@autor tw
 	 */
-	public static JScrollList(String title) {
+	public static  JScrollList createList(String title) {
 		
 		JScrollList c = new JScrollList();
 		// JCompoment hat einen Rahmen
-		Vector<String> list = new Vector<String>();
-	
+		Vector<String> list = new Vector<String>();	
 		JList jl = new JList(list);		
-		list.add("Test1");
-		list.add("Test2");
-		
 		c.setBorder(BorderFactory.createTitledBorder(title));
 		c.setViewportView(jl);
+		c.setList(list);
 		return c;		
 	}
 	

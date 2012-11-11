@@ -14,14 +14,12 @@ public class GUI extends JFrame{
 		// Wie die einzelene Zeile add(JListFabrik.createList("meine Liste"));
 		JScrollList comp = JListFabrik.createList("meine Liste");
 		this.add(comp);
-		this.addListElement("Test 1");
-		this.addListElement("Test 2");
+		for ( int i = 1; i < 100; i++)  comp.addListElement("Test " + i);
+		
 		setSize(600,400);	
 		setVisible(true);
-		add(JListFabrik.createList("meine Liste"));
+		
 	}
-	
-
 
 	public static void main(String[] args) {
 		

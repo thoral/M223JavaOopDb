@@ -26,6 +26,7 @@ public class Swing extends JFrame implements ActionListener{
 	JLabel laAutor = new JLabel("Autor");
 	JLabel laGenre = new JLabel("Genre");
 	JRadioButton r01 = new JRadioButton();
+	JRadioButton r02 = new JRadioButton();
 	// Variable deklarieren, um überall zu arbeiten
 	private Factory rbp;
 	private JPanel mainPanel;
@@ -39,11 +40,13 @@ public class Swing extends JFrame implements ActionListener{
 		mainPanel = fac.getPanel();
 		add(mainPanel);
 		
-		buch = fac.addField("Buchname"); 
+		
+		buch = fac.addField("Buchname");
 		autor = fac.addField("autor");	
 		genre = fac.addField("Genre");
 		
-		r01 = fac.createRadioButton("test", "hier");
+		r01 = fac.createRadioButton("test", "test");
+		r02 = fac.createRadioButton("hier", "hier");
 							
 		setVisible(true);
 	}

@@ -23,7 +23,7 @@ public class Gbl_1 extends JFrame implements ActionListener{
 	JTextField password = new JTextField(15);
 	JTextArea kommentar = new JTextArea(4,15);
 	JButton senden = new JButton("senden");
-	JButton schliessen = new JButton("schliesse");
+	JButton schliessen = new JButton("schliessen");
 	
 	JLabel LaBenutzername = new JLabel("Benutzername");
 	JLabel LaPassord = new JLabel("Password");
@@ -119,19 +119,22 @@ public class Gbl_1 extends JFrame implements ActionListener{
 		/*
 		 * Radio Button
 		 */
-			RadioButtonPanel rbp = new RadioButtonPanel("woher kennen Sie uns ");
-			//Action Command Frau bleibt
-			JRadioButton r01 = rbp.createRadioButton("Bekannte", "f");
-			JRadioButton r02 = rbp.createRadioButton("Internet", "m");
-			JRadioButton r03 = rbp.createRadioButton("Werbung", "n");
-			JRadioButton r04 = rbp.createRadioButton("Fernseh", "n");
-			add(rbp, gbc);
+		RadioButtonPanel rbp = new RadioButtonPanel("woher kennen Sie uns ");
+		//Action Command Frau bleibt
+		JRadioButton r01 = rbp.createRadioButton("Bekannte", "f");
+		JRadioButton r02 = rbp.createRadioButton("Internet", "m");
+		JRadioButton r03 = rbp.createRadioButton("Werbung", "n");
+		JRadioButton r04 = rbp.createRadioButton("Fernseh", "n");
+		add(rbp, gbc);
 			
-			gbc.gridx = 1;
-			gbc.gridy = 1;
-			
-			schliessen.addActionListener(this);
-			add(schliessen);
+/*
+ * schliessen
+ */
+		gbc.gridx = 1;
+		gbc.gridy = 6;			
+		schliessen.addActionListener(this);
+		gbl.setConstraints(schliessen, gbc);
+		add(schliessen);
 			
 			
 			
