@@ -9,10 +9,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
 
+import java.awt.Container;
+
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
 
 
 public class Gbl_1 extends JFrame implements ActionListener{
@@ -24,6 +30,8 @@ public class Gbl_1 extends JFrame implements ActionListener{
 	JTextArea kommentar = new JTextArea(4,15);
 	JButton senden = new JButton("senden");
 	JButton schliessen = new JButton("schliessen");
+	JList list = new JList(labels);
+	JScrollPane scrollPane = new JScrollPane(list);
 	
 	JLabel LaBenutzername = new JLabel("Benutzername");
 	JLabel LaPassord = new JLabel("Password");
@@ -100,6 +108,12 @@ public class Gbl_1 extends JFrame implements ActionListener{
 		kommentar.setWrapStyleWord(true);
 		gbl.setConstraints(kommentar, gbc);
 		add(kommentar);
+
+		
+		/*
+		 * JLIst
+		 */
+		String labels[] = { "A", "B", "C", "D","E", "F", "G", "H","I", "J" };
 		
 
 /*
@@ -158,6 +172,8 @@ public class Gbl_1 extends JFrame implements ActionListener{
 	public static void main(String[] args){
 		Gbl_1 demo = new Gbl_1();
 		demo.setVisible(true);
+		
+		
 	}
 
 }
