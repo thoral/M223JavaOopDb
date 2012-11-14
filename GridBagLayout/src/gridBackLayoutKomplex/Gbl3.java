@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -21,23 +22,25 @@ import javax.swing.JList;
 import javax.swing.JScrollPane;
 
 
-public class Gbl_1 extends JFrame implements ActionListener{
+public class Gbl3 extends JFrame implements ActionListener{
 	
 	
-	Button btClose;   
+	Button btClose; 
+	//JTextField
 	JTextField benutzername = new JTextField(15);
 	JTextField password = new JTextField(15);
 	JTextArea kommentar = new JTextArea(4,15);
 	JButton senden = new JButton("senden");
 	JButton schliessen = new JButton("schliessen");
-	JList list = new JList();
-	JScrollPane scrollPane = new JScrollPane(list);
-	
+	//Jlist 
+	JList list;
+	JPanel scrollPanel;
+	//Labels
 	JLabel LaBenutzername = new JLabel("Benutzername");
 	JLabel LaPassord = new JLabel("Password");
 	JLabel LaKommentar = new JLabel("Kommentar");
 	
-	public Gbl_1(){
+	public Gbl3(){
 		
 		super("Benutzer Formular");
 		
@@ -113,7 +116,14 @@ public class Gbl_1 extends JFrame implements ActionListener{
 		/*
 		 * JLIst
 		 */
+		gbc.gridx = 3;
+		gbc.gridy = 1;
 		String labels[] = { "A", "B", "C", "D","E", "F", "G", "H","I", "J" };
+		JList list = new JList(labels);
+		JScrollPane scrollPane = new JScrollPane(list);
+		JScrollPane
+		gbl.setConstraints(list, gbc);
+		add(list);
 		
 
 /*
@@ -125,14 +135,14 @@ public class Gbl_1 extends JFrame implements ActionListener{
 		gbl.setConstraints(senden, gbc);
 		add(senden);
 
+/*
+ * Radio Button
+ */
 		gbc.gridx = 0;
 		gbc.gridy = 4;
 		gbc.gridheight = 1;
 		gbc.gridwidth = 2;
 		
-		/*
-		 * Radio Button
-		 */
 		RadioButtonPanel rbp = new RadioButtonPanel("woher kennen Sie uns ");
 		//Action Command Frau bleibt
 		JRadioButton r01 = rbp.createRadioButton("Bekannte", "f");
@@ -150,10 +160,7 @@ public class Gbl_1 extends JFrame implements ActionListener{
 		gbl.setConstraints(schliessen, gbc);
 		add(schliessen);
 			
-			
-			
-			
-			pack();
+		pack();
 				
 	}
 	

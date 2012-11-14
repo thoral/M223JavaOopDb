@@ -10,10 +10,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
 
 public class GridBagLayoutDemo2 extends JFrame implements ActionListener{
 	Button btClose;
+	JScrollPane jsp;
 	
 	
 	
@@ -65,9 +67,17 @@ public class GridBagLayoutDemo2 extends JFrame implements ActionListener{
 		dlm.addElement("Käse");
 		dlm.addElement("Dessert");
 		dlm.addElement("Amuse Bouche");
+		dlm.addElement("warme Vorspeise");
+		dlm.addElement("Hauptgang");
+		dlm.addElement("Käse");
+		dlm.addElement("Dessert");
+		dlm.addElement("Amuse Bouche");
+		
 		
 		list.setModel(dlm);
-	
+		jsp = new JScrollPane(list);
+		
+		add(jsp, gbc);
 		// zweite
 	//	gbl.setConstraints(list, gbc);
 	//	add(list);
