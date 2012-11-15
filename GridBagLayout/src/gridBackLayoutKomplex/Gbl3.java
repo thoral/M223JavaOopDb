@@ -5,6 +5,7 @@ import java.awt.event.*;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -32,9 +33,11 @@ public class Gbl3 extends JFrame implements ActionListener{
 	JTextArea kommentar = new JTextArea(4,15);
 	JButton senden = new JButton("senden");
 	JButton schliessen = new JButton("schliessen");
+	
 	//Jlist 
-	JList list;
-	JPanel scrollPanel;
+	String[] listData = { "Shinguz", "Glapum'tianer", "Suffus", "Zypanon", "Tschung" };
+	JComponent jList = new JList( listData );
+				JScrollPane srollPane = new JScrollPane(jList);
 	//Labels
 	JLabel LaBenutzername = new JLabel("Benutzername");
 	JLabel LaPassord = new JLabel("Password");
@@ -116,15 +119,8 @@ public class Gbl3 extends JFrame implements ActionListener{
 		/*
 		 * JLIst
 		 */
-		gbc.gridx = 3;
-		gbc.gridy = 1;
-		String labels[] = { "A", "B", "C", "D","E", "F", "G", "H","I", "J" };
-		JList list = new JList(labels);
-		JScrollPane scrollPane = new JScrollPane(list);
-		JScrollPane
-		gbl.setConstraints(list, gbc);
-		add(list);
-		
+		gbl.setConstraints(srollPane,gbc);
+		add.(srollPane);
 
 /*
  * Button senden

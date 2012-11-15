@@ -31,7 +31,7 @@ public class Gbl_1 extends JFrame implements ActionListener{
 	JButton senden = new JButton("senden");
 	JButton schliessen = new JButton("schliessen");
 	JList list = new JList();
-	JScrollPane scrollPane = new JScrollPane(list);
+	JScrollPane scrollPane; 
 	
 	JLabel LaBenutzername = new JLabel("Benutzername");
 	JLabel LaPassord = new JLabel("Password");
@@ -113,7 +113,16 @@ public class Gbl_1 extends JFrame implements ActionListener{
 		/*
 		 * JLIst
 		 */
-		String labels[] = { "A", "B", "C", "D","E", "F", "G", "H","I", "J" };
+		gbc.gridx = 2;
+		gbc.gridy = 0;
+		gbc.gridwidth = 0;
+		gbc.gridheight = 0;
+		gbc.weightx = 0.0;
+		gbc.weighty = 0.0;
+		JScrollPane scrollPane = new JScrollPane(list);
+	//	gbc.fill = GridBagConstraints.BOTH;
+		gbl.setConstraints(scrollPane, gbc);
+		add(scrollPane);
 		
 
 /*
