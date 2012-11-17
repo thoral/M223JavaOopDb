@@ -87,6 +87,7 @@ public class Gbl_1 extends JFrame implements ActionListener{
  */
 		gbc.gridx = 0;
 		gbc.gridy = 1;
+		LaBenutzername.setHorizontalAlignment(JLabel.LEFT);
 		gbl.setConstraints(LaBenutzername, gbc);
 		add(LaBenutzername);
 /******Feld********/
@@ -102,6 +103,7 @@ public class Gbl_1 extends JFrame implements ActionListener{
  */
 		gbc.gridx = 0;
 		gbc.gridy = 2;
+		LaPassord.setHorizontalAlignment(JLabel.LEFT);
 		gbl.setConstraints(LaPassord, gbc);
 		add(LaPassord);
 /********Feld**************/	

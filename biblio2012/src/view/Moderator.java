@@ -35,7 +35,7 @@ public class Moderator implements ActionListener {
 
 	public static void main(String[] args) {
 		
-			new Moderator();
+		new Moderator();
 	
 		
 	}

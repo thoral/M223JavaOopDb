@@ -53,13 +53,13 @@ public class DetailView extends JFrame implements ActionListener
 	*/
 	private JTextField addField(String lbl, int w)
 	{
-	JTextField tf = new JTextField(w);
-	JPanel p = new JPanel();
-	p.setLayout(new BoxLayout(p, BoxLayout.X_AXIS));
-	p.add(new JLabel(lbl));
-	p.add(tf);
-	content.add(p);
-	return tf;
+		JTextField tf = new JTextField(w);
+		JPanel p = new JPanel();
+		p.setLayout(new BoxLayout(p, BoxLayout.X_AXIS));
+		p.add(new JLabel(lbl));
+		p.add(tf);
+		content.add(p);
+		return tf;
 	}
 	
 	/********************************
@@ -73,8 +73,7 @@ public class DetailView extends JFrame implements ActionListener
 		b.setIsbn(isbn.getText() );
 		b.setSuchbegriffe(suchbegriff.getText() );
 		
-		b.save();
-		
+		b.save();	
 	}
 
 }
