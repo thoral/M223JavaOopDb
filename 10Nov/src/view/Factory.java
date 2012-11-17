@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import java.awt.Container;
 import java.awt.GridBagConstraints;
@@ -42,6 +43,7 @@ this.mainPanel.setBorder(BorderFactory.createTitledBorder(t) );
 public JRadioButton createRadioButton(String t, String ac) {
 	// TODO Auto-generated method stub
 	
+	
 	JRadioButton b = new JRadioButton(t);	
 	b.setActionCommand(ac);	
 	mainPanel.add(b);
@@ -49,6 +51,8 @@ public JRadioButton createRadioButton(String t, String ac) {
 
 	return b;
 }
+
+
 
 public JPanel getPanel() {
 	

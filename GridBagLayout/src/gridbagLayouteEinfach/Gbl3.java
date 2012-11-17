@@ -1,4 +1,4 @@
-package gridBackLayoutKomplex;
+package gridbagLayouteEinfach;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -37,7 +37,7 @@ public class Gbl3 extends JFrame implements ActionListener{
 	//Jlist 
 	String[] listData = { "Shinguz", "Glapum'tianer", "Suffus", "Zypanon", "Tschung" };
 	JComponent jList = new JList( listData );
-				JScrollPane srollPane = new JScrollPane(jList);
+	
 	//Labels
 	JLabel LaBenutzername = new JLabel("Benutzername");
 	JLabel LaPassord = new JLabel("Password");
@@ -55,7 +55,7 @@ public class Gbl3 extends JFrame implements ActionListener{
 		// Objekt gbl dem Fenster zuweisen
 		this.getContentPane().setLayout(gbl);
 		
-		gbc.gridwidth = GridBagConstraints.REMAINDER;
+/*		gbc.gridwidth = GridBagConstraints.REMAINDER;
 		gbc.gridheight = 1;
 		gbc.insets = new Insets(0, 5, 0, 5);
 		Label header = new Label("Benutzereingabe"); 
@@ -63,7 +63,7 @@ public class Gbl3 extends JFrame implements ActionListener{
 		add(header, gbc);
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.NONE; // den Remainder wieder zurückstellen
-		
+*/		
 		
 /*
  * Elemente hinzufügen
@@ -76,6 +76,7 @@ public class Gbl3 extends JFrame implements ActionListener{
 		gbc.gridy = 1;
 		gbl.setConstraints(LaBenutzername, gbc);
 		add(LaBenutzername);
+		
 /******Feld********/
 		gbc.gridx = 1;
 		gbc.gridy = 1;
@@ -119,8 +120,12 @@ public class Gbl3 extends JFrame implements ActionListener{
 		/*
 		 * JLIst
 		 */
-		gbl.setConstraints(srollPane,gbc);
-		add.(srollPane);
+		JScrollPane srollPane = new JScrollPane(jList);
+		
+		Component scrollPane = null;
+		gbl.setConstraints(scrollPane, gbc);
+		add(scrollPane);
+		
 
 /*
  * Button senden

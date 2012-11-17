@@ -1,4 +1,4 @@
-package gridBackLayoutKomplex;
+package gridbagLayouteEinfach;
 
 
 import java.awt.*;
