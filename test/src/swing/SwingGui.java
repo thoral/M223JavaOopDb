@@ -101,6 +101,7 @@ public class SwingGui extends JFrame{
 			 */
 					gbc.gridx = 3;
 					gbc.gridy = 0;
+					//gbc.anchor = GridBagConstraints.EAST;
 					//laVorname.setHorizontalAlignment(JLabel.LEFT);
 					gbl.setConstraints(LaName, gbc);
 					add(LaName);
@@ -108,6 +109,8 @@ public class SwingGui extends JFrame{
 					gbc.gridx = 4;
 					gbc.gridy = 0;
 					gbc.gridheight = 1;
+					gbc.gridwidth = 2;
+					//gbc.anchor = GridBagConstraints.EAST;
 					gbl.setConstraints(jtName, gbc);
 					add(jtName);
 					
@@ -116,6 +119,7 @@ public class SwingGui extends JFrame{
 			 */
 					gbc.gridx = 0;
 					gbc.gridy = 1;
+					gbc.gridwidth = 1;
 					//laVorname.setHorizontalAlignment(JLabel.LEFT);
 					gbl.setConstraints(LaStrasse, gbc);
 					add(LaStrasse);
@@ -136,6 +140,8 @@ public class SwingGui extends JFrame{
 			/********Feld**************/	
 					gbc.gridx = 1;
 					gbc.gridy = 3;
+					gbc.anchor = GridBagConstraints.EAST;
+					gbc.ipadx = 2;
 					gbc.gridheight = 1;				
 					gbl.setConstraints(jtPLZ, gbc);
 					add(jtPLZ);	
@@ -150,90 +156,12 @@ public class SwingGui extends JFrame{
 			/********Feld**************/	
 					gbc.gridx = 3;
 					gbc.gridy = 3;
+					gbc.gridwidth = 2;
 					gbc.gridheight = 1;				
 					gbl.setConstraints(jtOrt, gbc);
 					add(jtOrt);
 					
-			/*
-			 * JLIst
-			 */
-					JPanel jlpanel = new JPanel(new GridLayout(0, 1));
-				    Border border = BorderFactory.createTitledBorder("Funktionen");
-				    jlspanel.setBorder(border);
-					gbc.gridx = 4;
-					gbc.gridy = 4;
-					gbc.gridwidth = 1;
-					gbc.gridheight = 4;
-					gbc.weightx = 0;
-					gbc.weighty = 0;
-					gbc.gridwidth= 1;
-					JScrollPane scrollPane = new JScrollPane(list);
-				//	gbc.fill = GridBagConstraints.BOTH;
-					gbl.setConstraints(scrollPane, gbc);
-					add(scrollPane);		
-			/*
-			 * Radio Button
-			 */
-					gbc.gridx = 0;
-					gbc.gridy = 4;
-					gbc.gridheight = 1;
-					gbc.gridwidth = 2;
-					RadioButtonPanel rbp = new RadioButtonPanel("Anrede ");
-					//Action Command Frau bleibt
-					JRadioButton r01 = rbp.createRadioButton("Herr", "f");
-					JRadioButton r02 = rbp.createRadioButton("Frau", "m");
-					JRadioButton r03 = rbp.createRadioButton("Neutral", "n");				
-					add(rbp, gbc);		
-			/*
-			 * Checkbox		
-			 */	
-					gbc.gridx = 0;
-					gbc.gridy = 6;
-					gbc.gridheight = 1;
-					gbc.gridwidth = 3;
-					JPanel panel = new JPanel(new GridLayout(0, 1));
-				    Border border = BorderFactory.createTitledBorder("Zustellen");
-				    panel.setBorder(border);
-				    JCheckBox check = new JCheckBox("Newsletter Papier");
-				    check.setBorderPaintedFlat(true);
-				    panel.add(check);
-				    check = new JCheckBox("Newsletter EMail");
-				    panel.add(check);
-				    check = new JCheckBox("Einladung zu GV");
-				    check.setBorderPaintedFlat(true);
-				    panel.add(check);
-				    check = new JCheckBox("Rechnung und Jahresbericht");
-				    check.setBorderPaintedFlat(true);
-				    panel.add(check);
-				    gbl.setConstraints(panel, gbc);
-					add(panel);
-				    
-				    
 			
-			/*
-			 *speichern
-			 */
-					gbc.gridx = 0;
-					gbc.gridy = 10;							
-					gbl.setConstraints(speichern, gbc);
-					add(speichern);
-					
-			/*
-			 *schliessen
-			 */
-					gbc.gridx = 2;
-					gbc.gridy = 10;	
-					//schliessen.addActionListener((ActionListener) this);
-					gbl.setConstraints(schliessen, gbc);
-					add(schliessen);
-						
-			/*
-			 *neu
-			*/
-					gbc.gridx = 4;
-					gbc.gridy = 10;							
-					gbl.setConstraints(neu, gbc);
-					add(neu);
 			 
 					
 			pack();

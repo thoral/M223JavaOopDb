@@ -7,24 +7,29 @@ import java.sql.Statement;
 
 public class kind extends dbObjekt
 {
-	int id_kind;
+	
 	String name;
 	String klasse;
 
-	public kind(int id, String  n)
+	/*public kind(int id, String  n)
 	{
 		this.id_kind = id;
 		this.name = n;
+		System.out.println("1.");
+		save();
 	}
-
+*/
 	public kind(String n, String kl) {
 		
 		this.name = n;
 		this.klasse = kl;
+		System.out.println("2.");
+		save();
+		
 	}
 	
 	public void save() {
-
+		System.out.println("sgf");
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
@@ -46,15 +51,14 @@ public class kind extends dbObjekt
 			e.printStackTrace();
 		}
 		try {
-			st.execute("INSERT INTO `bibliothek`.`kind` (`id`, `name`, `klasse`) VALUES (NULL, '"
+			st.execute("INSERT INTO `bibliothek`.`kind` ( `name`, `klasse`) VALUES ( '" + name + "', '" + klasse + "');");
+		/*	st.execute("INSERT INTO `bibliothek`.`kind` ( `name`, `klasse`) VALUES (NULL, '"
 					+ id_kind + "', '" + name + "', '" + klasse + "');");
+					*/
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Kind gespeichert " + this.getTitle());
-		System.out
-				.println("INSERT INTO `bibliothek`.`kind` (`id_kind`, `name`, `klasse`) VALUES (NULL, '"
-						+ id_kind + "', '" + name + "', '" + klasse + "');");
+		
 	}
 	
 	

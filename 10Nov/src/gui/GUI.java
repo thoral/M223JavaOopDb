@@ -3,6 +3,8 @@ package gui;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
+import view.JListFabrik;
+
 public class GUI extends JFrame{
 
 /**
